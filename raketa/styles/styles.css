@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'Chewy';
+    src: url('../assets/fonts/Chewy/Chewy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: repeating-linear-gradient(270deg, pink, lightblue, pink);
+    color: #000000;
+    font-size: 16px;
+}
+
+.content{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*INPUT STYLE*/
+input[type="date"],
+select {
+    padding: 10px;
+    font-family: inherit;
+    border: 2px solid #a186ad;
+    background-color: white;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 150px;
+}
+
+input[type="text"],
+textarea {
+    border-radius: 8px;
+    font-family: inherit;
+    border: 2px solid #000000;
+    background-color: white;
+    color: #333;
+}
+
+select,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+.form {
+    position: relative;
+    font-family: 'Chewy', sans-serif;
+    padding: 20px 20px 140px 20px;
+    max-width: 350px;
+    margin: 50px auto;
+    width: 90%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-field,
+input,
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+label,
+legend {
+    text-transform: capitalize;
+}
+
+option {
+    cursor: pointer;
+}
+
+.hint {
+    color: #a186ad;
+}
+
+fieldset {
+    border: 2px solid #a186ad;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: black;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.05);
+}
+
+legend,
+textarea,
+input[type="text"],
+button {
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 2px solid #a186ad;
+    color: black;
+    position: relative;
+}
+
+#submit {
+    font-family: inherit;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/*ASSETS*/
+.gift {
+    position: absolute;
+    top: 80px;
+    right: -50px;
+    height: auto;
+    transform: rotate(15deg);
+
+}
+
+.flower {
+    bottom: -45px;
+    position: absolute;
+    right: 40px;
+    height: auto;
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .gift {
+        width: 138px;
+        height: 144px;
+        right: -35px;
+    }
+
+    .flower {
+        bottom:-40px;
+        width: 239px;
+        height: 147px;
+        right: 60px;
+
+    }
+    .form
+    {
+        padding: 20px 20px 90px 20px;
+    }
+}
