@@ -21,6 +21,7 @@ async function loadSchema() {
         const data = {};
         new FormData(form).forEach((value, key) => {
             const path = key.split(".");
+            
             let ref = data;
             while (path.length > 1) {
                 const part = path.shift();
@@ -38,7 +39,9 @@ function renderField(name, field, path = []) {
     const wrapper = document.createElement("div");
     wrapper.className = "form-field";
 
-    const fullPath = [...path, name].join(".");
+    const fullPath = [...path, name]
+  .map((segment, index) => (index === 0 ? segment : `[${segment}]`))
+  .join('');
 
     const label = document.createElement("label");
 
