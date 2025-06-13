@@ -1,0 +1,46 @@
+{
+    "birthdate": {
+        "type": "date",
+        "label": "Date of birth",
+        "hint": "We will send you a gift!"
+    },
+    "gender": {
+        "type": "select",
+        "options": [
+            [
+                0,
+                "Male"
+            ],
+            [
+                1,
+                "Female"
+            ],
+            [
+                9,
+                "Do not specify"
+            ]
+        ],
+        "placeholder": "Please select"
+    },
+    "address": {
+        "type": "schema",
+        "schema": {
+            "zip": {
+                "type": "text",
+                "pattern": "[1-9]{1}[0-9]{3}"
+            },
+            "street": {
+                "type": "textarea"
+            }
+        }
+    },
+    "secret 1": {
+        "type": "text",
+        "placeholder": "Please type your biggest secret."
+    }
+    ,
+    "secret 2": {
+        "type": "text",
+        "placeholder": "Please type your biggest secret."
+    }
+}
